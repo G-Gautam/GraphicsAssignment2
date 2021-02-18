@@ -38,7 +38,7 @@ class cameraMatrix:
         values = [U, V, N]
         for i in range(0, 3):
             for j in range(0, 3):
-                mv.set(i, j, values[j].get(j, 0))
+                mv.set(i, j, values[i].get(j, 0))
 
         mv.set(0,3,-( E.get(0,0) * U.get(0,0) + E.get(1,0) * U.get(1,0) + E.get(2,0) * U.get(2,0)))
         mv.set(1,3,-( E.get(0,0) * V.get(0,0) + E.get(1,0) * V.get(1,0) + E.get(2,0) * V.get(2,0)))
